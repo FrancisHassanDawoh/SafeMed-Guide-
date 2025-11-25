@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeMed Guide – Francis Hassan Dawoh</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+
+        header {
+            background: #0b6efd;
+            padding: 30px 20px;
+            color: white;
+            text-align: center;
+        }
+
+        header img {
+            width: 80px;
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+        .hero {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .search-box {
+            width: 90%;
+            max-width: 500px;
+            margin: 10px auto;
+            display: block;
+            padding: 12px;
+            border: 2px solid #0b6efd;
+            border-radius: 8px;
+        }
+
+        h2 {
+            margin-left: 15px;
+            color: #0b6efd;
+        }
+
+        .card {
+            background: white;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 5px solid #0b6efd;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background: #222;
+            color: white;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .faq {
+            background: #fff;
+            padding: 15px;
+            margin: 15px;
+            border-radius: 8px;
+        }
+
+        .contact {
+            background: #fff;
+            padding: 15px;
+            margin: 15px;
+            border-radius: 8px;
+        }
+
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #aaa;
+            border-radius: 6px;
+        }
+
+        .contact button {
+            background: #0b6efd;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        function searchMedicine() {
+            let input = document.getElementById("search").value.toLowerCase();
+            let cards = document.getElementsByClassName("card");
+
+            for (let i = 0; i < cards.length; i++) {
+                let text = cards[i].innerText.toLowerCase();
+                cards[i].style.display = text.includes(input) ? "" : "none";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <img src="YOUR-LOGO.png" alt="SafeMed Logo">
+    <h1>SafeMed Guide</h1>
+    <p>By Francis Hassan Dawoh</p>
+</header>
+
+<div class="hero">
+    <input id="search" class="search-box" onkeyup="searchMedicine()" placeholder="Search for a medicine...">
+</div>
+
+<h2>How to Take Medicines</h2>
+
+<div class="card">
+    <h3>💊 Paracetamol</h3>
+    <p>Use for headache, fever, or pain.</p>
+    <p><strong>Adults:</strong> 1 tablet every 6–8 hours.</p>
+    <p><strong>Do NOT exceed:</strong> 4 tablets in 24 hours.</p>
+</div>
+
+<div class="card">
+    <h3>🤧 Cold & Flu Syrup</h3>
+    <p>Use for cold, cough, or blocked nose.</p>
+    <p><strong>Adults:</strong> 10ml every 8 hours.</p>
+    <p><strong>Note:</strong> May cause drowsiness.</p>
+</div>
+
+<div class="card">
+    <h3>🦠 Antibiotics</h3>
+    <p>Use ONLY when prescribed by a doctor.</p>
+    <p>Finish all doses even if you begin to feel better.</p>
+</div>
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+    <p><strong>Q:</strong> Can I take medicine without food?<br>
+    <strong>A:</strong> Some medicines require food. Always check the label.</p>
+
+    <p><strong>Q:</strong> What if I miss a dose?<br>
+    <strong>A:</strong> Take it as soon as you remember unless it’s almost time for your next dose.</p>
+</div>
+
+<h2>Contact</h2>
+
+<div class="contact">
+    <form action="mailto:yourgmail@gmail.com" method="POST" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="4" placeholder="Type your message..." required></textarea>
+        <button type="submit">Send</button>
+    </form>
+</div>
+
+<footer>
+    <p><strong>Medical Disclaimer:</strong> This website provides general educational information only.  
+    It does NOT replace medical advice from a licensed doctor or pharmacist.  
+    Always consult a healthcare professional before taking any medication.</p>
+</footer>
+
+</body>
+</html>
